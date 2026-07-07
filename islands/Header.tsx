@@ -1,0 +1,39 @@
+import { navItems } from "../constants/nav.tsx";
+
+export default function Header() {
+  return (
+    <header class="flex flex-col items-center pt-2">
+      <nav class="w-full max-w-md">
+        <ul class="flex justify-between text-gray-text">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      {
+        /* <picture class="transition-opacity duration-300">
+        <source
+          srcset="/ava/ava.jxl"
+          type="image/jxl"
+        />
+        <source
+          srcset="/ava/ava.webp"
+          type="image/webp"
+        />
+        <img
+          width="144"
+          height="144"
+          src="/ava/ava.jpg"
+          alt="avatar"
+          className="rounded-2xl aspect-square w-36 h-36 object-cover"
+        />
+      </picture> */
+      }
+      <h1 class="max-w-2xs text-3xl text-white min-h-6">
+        <span class="text-gray-text min-h-5">Елизавета Овчарова</span>
+      </h1>
+    </header>
+  );
+}
