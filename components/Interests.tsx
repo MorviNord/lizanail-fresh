@@ -1,4 +1,4 @@
-import interests from "../constants/listInterests.tsx";
+import interests from "../data/listInterests.tsx";
 
 export function Interests() {
   return (

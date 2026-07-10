@@ -1,5 +1,5 @@
 // Ваш компонент
-import social from "../constants/listsocial.tsx";
+import social from "../data/listsocial.tsx";
 
 export default function Index() {
   return (

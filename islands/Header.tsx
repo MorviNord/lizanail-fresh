@@ -1,4 +1,4 @@
-import { navItems } from "../constants/nav.tsx";
+import { navItems } from "../data/nav.tsx";
 
 export default function Header() {
   return (

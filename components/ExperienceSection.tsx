@@ -1,4 +1,4 @@
-import { ExperienceData } from "../constants/ExperienceData.tsx";
+import { ExperienceData } from "../data/ExperienceData.tsx";
 
 export default function ExperienceSection() {
   return (
