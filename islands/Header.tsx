@@ -12,27 +12,21 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-      {
-        /* <picture class="transition-opacity duration-300">
+      <picture class="transition-opacity duration-300">
         <source
-          srcset="/ava/ava.jxl"
-          type="image/jxl"
-        />
-        <source
-          srcset="/ava/ava.webp"
-          type="image/webp"
+          srcset="/ava/ava.jpg"
+          type="image/jpeg"
         />
         <img
-          width="144"
-          height="144"
+          width="256"
+          height="356"
           src="/ava/ava.jpg"
           alt="avatar"
-          className="rounded-2xl aspect-square w-36 h-36 object-cover"
+          className="rounded-2xl aspect-square object-cover"
         />
-      </picture> */
-      }
+      </picture>
       <h1 class="max-w-2xs text-3xl text-white min-h-6">
-        <span class="text-gray-text min-h-5">Елизавета Овчарова</span>
+        <span class="text-gray-text min-h-5">Елизавета Овчаровa</span>
       </h1>
     </header>
   );
