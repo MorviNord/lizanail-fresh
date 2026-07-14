@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main class="x-4 mx-auto flex flex-col items-center mb-8">
+      <main class="x-4 mx-auto flex flex-col items-center mb-6">
         <Welcome />
         <Interests />
         <SocialLinks />
