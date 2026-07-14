@@ -28,7 +28,7 @@ export default function Header() {
               height="356"
               src="/ava/ava.jpg"
               alt="avatar"
-              class="h-40 w-40 rounded-[1.4rem] object-cover object-center sm:h-48 sm:w-48"
+              class="h-80 w-80 rounded-[1.4rem] object-cover "
             />
           </picture>
         </div>
