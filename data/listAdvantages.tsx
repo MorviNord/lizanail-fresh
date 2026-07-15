@@ -1,4 +1,4 @@
-const interests = [
+const advantages = [
   {
     id: 1,
     img: "/img/interests/sterilization_item.svg",
@@ -19,4 +19,4 @@ const interests = [
   },
 ];
 
-export default interests;
+export default advantages;

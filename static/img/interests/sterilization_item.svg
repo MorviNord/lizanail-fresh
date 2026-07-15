@@ -1,39 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-  <defs>
-    <!-- Sparkling stars exactly as represented in the stylish aesthetic -->
-    <g id="star">
-      <path d="M 0,-3 C 0,-0.8 0.8,0 3,0 C 0.8,0 0,0.8 0,3 C 0,0.8 -0.8,0 -3,0 C -0.8,0 0,-0.8 0,-3 Z" fill="#1A1A1A" />
-    </g>
-    <g id="star-small">
-      <path d="M 0,-1.8 C 0,-0.5 0.5,0 1.8,0 C 0.5,0 0,0.5 0,1.8 C 0,0.5 -0.5,0 -1.8,0 C -0.5,0 0,-0.5 0,-1.8 Z" fill="#1A1A1A" />
-    </g>
-  </defs>
-
-  <!-- Base canvas background -->
-  <rect width="100%" height="100%" fill="none" />
-
-  <!-- The Craft Bag with the distinctive left-side blue shade -->
-  <g transform="translate(1, 2)">
-    <!-- Blue decorative accent fill on the left side of the bag -->
-    <path d="M 33.5,37.5 L 29.5,75 C 29,79.5 32.5,83 37,83 L 42,83 L 39,37.5 Z" fill="#002FA7" />
-
-    <!-- Craft bag main contour stroke -->
-    <path d="M 33,37 L 29,75 C 28.5,80 32.5,84 37.5,84 L 62.5,84 C 67.5,84 71.5,80 71,75 L 67,37 C 66.5,33 63,33 59,33 L 41,33 C 37,33 33.5,33 33,37 Z" 
-          fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
-
-    <!-- Horizontal slot near the top of the envelope -->
-    <rect x="42" y="40" width="16" height="3.5" rx="1.8" fill="#1A1A1A" />
-
-    <!-- Perfectly round chemical indicator dot on the front of the bag -->
-    <circle cx="50" cy="62" r="6.5" fill="#002FA7" />
-
-    <!-- Subtle inner line crease on the right side of the bag to match the style -->
-    <path d="M 64,41 L 67.5,75" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" opacity="0.3" />
-  </g>
-
-  <!-- Sparkles flying above the envelope -->
-  <use href="#star" x="48" y="24" />
-  <use href="#star-small" x="42" y="29" />
-  <use href="#star" x="58" y="27" />
-  <use href="#star-small" x="54" y="20" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg
+  width="200px"
+  height="200px"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M27.1847 36.6487C26.5567 36.2385 25.8062 36 25 36C22.7909 36 21 37.7908 21 40C21 42.2091 22.7909 44 25 44C27.2011 44 28.987 42.2221 28.9999 40.0239L29.2239 36H30.7761L31.0001 40.0232C31.0126 42.2217 32.7986 44 35 44C37.2091 44 39 42.2091 39 40C39 37.7908 37.2091 36 35 36C34.1938 36 33.4434 36.2385 32.8153 36.6487L30.9985 4.01025L30 4.06583L29.0016 4.01025L27.1847 36.6487ZM30.6648 34L30 22.058L29.3353 34H30.6648ZM31 17.9999C31 18.5522 30.5523 18.9999 30 18.9999C29.4477 18.9999 29 18.5522 29 17.9999C29 17.4476 29.4477 16.9999 30 16.9999C30.5523 16.9999 31 17.4476 31 17.9999ZM23 40C23 38.8954 23.8954 38 25 38C26.1046 38 27 38.8954 27 40C27 41.1045 26.1046 42 25 42C23.8954 42 23 41.1045 23 40ZM35 38C33.8954 38 33 38.8954 33 40C33 41.1045 33.8954 42 35 42C36.1046 42 37 41.1045 37 40C37 38.8954 36.1046 38 35 38Z"
+    fill="#6b6863"
+  />
+  <path
+    d="M16 14V4C16 4 12.5667 6.05996 12.0617 13.9968C11.9916 15.0992 12.8954 16 14 16C15.1046 16 16 15.1046 16 14Z"
+    fill="#6b6863"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M13 18.5C13 17.6716 13.6716 17 14.5 17C15.3284 17 16 17.6716 16 18.5V19.2929L13 22.2929V18.5ZM13 23.7071V26.2929L16 23.2929V20.7071L13 23.7071ZM13 30.2929V27.7071L16 24.7071V27.2929L13 30.2929ZM13 31.7071V42.5C13 43.3284 13.6716 44 14.5 44C15.3284 44 16 43.3284 16 42.5V28.7071L13 31.7071Z"
+    fill="#a58a4c"
+  />
 </svg>

@@ -1,20 +1,20 @@
-import interests from "../data/listInterests.tsx";
+import advantages from "../data/listAdvantages.tsx";
 
-export function Interests() {
+export function Advantages() {
   return (
     <section class="mt-8 flex flex-col items-center">
-      <div class="text-gray-300">
-        <ul class="flex gap-3">
-          {interests.map((item) => (
-            <li class="flex flex-col items-center" key={item.id}>
+      <div class="text-gold-400">
+        <ul class="flex flex-wrap justify-center gap-6 md:gap-8">
+          {advantages.map((item) => (
+            <li class="flex flex-col items-center gap-2" key={item.id}>
               <img
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 src={item.img}
                 alt={item.alt}
-                class="w-40 h-40 block object-contain"
+                class="w-20 h-20 block object-contain"
               />
-              {item.label}
+              <span class="text-center leading-tight">{item.label}</span>
             </li>
           ))}
         </ul>
