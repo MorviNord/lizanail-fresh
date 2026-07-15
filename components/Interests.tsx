@@ -8,11 +8,11 @@ export function Interests() {
           {interests.map((item) => (
             <li class="flex flex-col items-center" key={item.id}>
               <img
-                width="30"
-                height="30"
+                width="40"
+                height="40"
                 src={item.img}
                 alt={item.alt}
-                class="w-7.5 h-7.5 block"
+                class="w-40 h-40 block object-contain"
               />
               {item.label}
             </li>

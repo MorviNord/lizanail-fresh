@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Sparkling stars exactly as represented in the stylish aesthetic -->
+    <g id="star">
+      <path d="M 0,-3 C 0,-0.8 0.8,0 3,0 C 0.8,0 0,0.8 0,3 C 0,0.8 -0.8,0 -3,0 C -0.8,0 0,-0.8 0,-3 Z" fill="#1A1A1A" />
+    </g>
+    <g id="star-small">
+      <path d="M 0,-1.8 C 0,-0.5 0.5,0 1.8,0 C 0.5,0 0,0.5 0,1.8 C 0,0.5 -0.5,0 -1.8,0 C -0.5,0 0,-0.5 0,-1.8 Z" fill="#1A1A1A" />
+    </g>
+  </defs>
+
+  <!-- Base canvas background -->
+  <rect width="100%" height="100%" fill="none" />
+
+  <!-- The Craft Bag with the distinctive left-side blue shade -->
+  <g transform="translate(1, 2)">
+    <!-- Blue decorative accent fill on the left side of the bag -->
+    <path d="M 33.5,37.5 L 29.5,75 C 29,79.5 32.5,83 37,83 L 42,83 L 39,37.5 Z" fill="#002FA7" />
+
+    <!-- Craft bag main contour stroke -->
+    <path d="M 33,37 L 29,75 C 28.5,80 32.5,84 37.5,84 L 62.5,84 C 67.5,84 71.5,80 71,75 L 67,37 C 66.5,33 63,33 59,33 L 41,33 C 37,33 33.5,33 33,37 Z" 
+          fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+
+    <!-- Horizontal slot near the top of the envelope -->
+    <rect x="42" y="40" width="16" height="3.5" rx="1.8" fill="#1A1A1A" />
+
+    <!-- Perfectly round chemical indicator dot on the front of the bag -->
+    <circle cx="50" cy="62" r="6.5" fill="#002FA7" />
+
+    <!-- Subtle inner line crease on the right side of the bag to match the style -->
+    <path d="M 64,41 L 67.5,75" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" opacity="0.3" />
+  </g>
+
+  <!-- Sparkles flying above the envelope -->
+  <use href="#star" x="48" y="24" />
+  <use href="#star-small" x="42" y="29" />
+  <use href="#star" x="58" y="27" />
+  <use href="#star-small" x="54" y="20" />
+</svg>

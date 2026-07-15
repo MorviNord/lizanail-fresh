@@ -3,7 +3,7 @@ import { navItems } from "../data/nav.tsx";
 export default function Header() {
   return (
     <header class="flex flex-col items-center px-4 pt-3 sm:px-6">
-      <nav class="w-full max-w-md rounded-full border border-cream-400 bg-white/70 px-4 py-3 shadow-[0_8px_24px_rgba(72,57,25,0.06)] backdrop-blur">
+      <nav class="w-full max-w-md rounded-2xl border border-cream-400 bg-white/70 px-4 py-3 shadow-[0_8px_24px_rgba(72,57,25,0.06)]">
         <ul class="flex justify-between text-sm font-medium tracking-[0.2em] text-gray-text/90 sm:text-base">
           {navItems.map((item) => (
             <li key={item.id}>

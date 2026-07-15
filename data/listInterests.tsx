@@ -1,27 +1,21 @@
 const interests = [
   {
     id: 1,
-    img: "/img/interests/fitness_item.svg",
-    label: "спортзал",
-    alt: "Моё увлечение фитнесом",
+    img: "/img/interests/sterilization_item.svg",
+    label: "100% стерильность",
+    alt: "100% стерильность и безопасность процедур",
   },
   {
     id: 2,
-    img: "/img/interests/crypto_item.svg",
-    label: "крипто",
-    alt: "Интерес к криптовалютам",
+    img: "/img/interests/materials_item.svg",
+    label: "Материалы: IQ Beauty, 4Blanc, CNI",
+    alt: "Использование качественных материалов для маникюра и педикюра",
   },
   {
     id: 3,
-    img: "/img/interests/games_item.svg",
-    label: "игры",
-    alt: "Увлечение видеоиграми",
-  },
-  {
-    id: 4,
-    img: "/img/interests/coding_item.svg",
-    label: "кодинг",
-    alt: "Программирование как хобби",
+    img: "/img/interests/safe_cutting_item.svg",
+    label: "Безопасная техника среза",
+    alt: "Использование безопасной техники при проведении процедур",
   },
 ];
 
