@@ -2,7 +2,7 @@ import advantages from "../data/listAdvantages.tsx";
 
 export function Advantages() {
   return (
-    <section class="mt-8 flex flex-col items-center">
+    <section class="mt-8 flex flex-col items-center gap-4">
       <div class="text-gold-400">
         <ul class="flex flex-wrap justify-center gap-6 md:gap-8">
           {advantages.map((item) => (
@@ -14,12 +14,14 @@ export function Advantages() {
                 alt={item.alt}
                 class="w-20 h-20 block object-contain"
               />
-              <span class="text-center leading-tight">{item.label}</span>
+              <span class="block max-w-45 text-center leading-tight wrap-break-word whitespace-normal">
+                {item.label}
+              </span>
             </li>
           ))}
         </ul>
       </div>
-      <span class="flex mt-4 items-center gap-2 text-gray-300">
+      <span class="flex mt-4 items-center gap-2 text-gold-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"

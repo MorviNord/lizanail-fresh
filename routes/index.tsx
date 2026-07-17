@@ -1,8 +1,10 @@
 import Header from "../islands/Header.tsx";
+import Welcome from "../components/Welcome.tsx";
 import { Advantages } from "../components/Advantages.tsx";
+import Price from "../components/Price.tsx";
 
 import SocialLinks from "../components/SocialLinks.tsx";
-import Welcome from "../components/Welcome.tsx";
+
 import Footer from "../components/Footer.tsx";
 
 export default function Home() {
@@ -12,6 +14,7 @@ export default function Home() {
       <main class="x-4 mx-auto flex flex-col items-center mb-6">
         <Welcome />
         <Advantages />
+        <Price />
         <SocialLinks />
       </main>
       <Footer />

@@ -8,7 +8,7 @@ const advantages = [
   {
     id: 2,
     img: "/img/interests/materials_item.svg",
-    label: "Материалы: IQ Beauty, 4Blanc, CNI",
+    label: "Надежные материалы: IQ Beauty, 4Blanc, CNI",
     alt: "Использование качественных материалов для маникюра и педикюра",
   },
   {
