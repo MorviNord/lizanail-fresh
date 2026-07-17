@@ -38,7 +38,7 @@ export default function Works() {
         id="works"
         class="mx-auto mt-10 w-full max-w-6xl px-4 sm:px-6 lg:px-8"
       >
-        <div class="rounded-[2rem] border border-cream-200/80 bg-gradient-to-br from-cream-50 via-white to-cream-100 p-6 shadow-[0_10px_40px_rgba(165,138,76,0.12)] sm:p-8 lg:p-10">
+        <div class="rounded-4xl border border-cream-200/80 bg-linear-to-br from-cream-50 via-white to-cream-100 p-6 shadow-[0_10px_40px_rgba(165,138,76,0.12)] sm:p-8 lg:p-10">
           <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p class="text-sm uppercase tracking-[0.35em] text-gold-400">
@@ -62,7 +62,7 @@ export default function Works() {
             {works.map((item) => (
               <article
                 key={item.title}
-                class="cursor-zoom-in overflow-hidden rounded-[1.5rem] border border-cream-200 bg-white/80 shadow-sm"
+                class="cursor-zoom-in overflow-hidden rounded-3xl border border-cream-200 bg-white/80 shadow-sm"
                 onClick={() => openImage(item.image, item.title)}
                 role="button"
                 tabIndex={0}
@@ -105,14 +105,14 @@ export default function Works() {
               type="button"
               onClick={closeImage}
               aria-label="Закрыть фото"
-              class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-stone-500 shadow-lg"
+              class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-stone-500 shadow-lg cursor-pointer"
             >
               ×
             </button>
             <img
               src={selectedImage}
               alt={selectedTitle}
-              class="max-h-[85vh] max-w-full rounded-[1.5rem] object-contain shadow-2xl"
+              class="max-h-[85vh] max-w-full rounded-3xl object-contain shadow-2xl"
             />
           </div>
         </div>
