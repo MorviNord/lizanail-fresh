@@ -21,7 +21,7 @@ export default function Price() {
           </a>
         </div>
 
-        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div class="mt-8 grid gap-4 xl:grid-cols-2">
           {services.map((service) => (
             <article
               key={service.name}

@@ -2,6 +2,7 @@ import Header from "../islands/Header.tsx";
 import Welcome from "../components/Welcome.tsx";
 import { Advantages } from "../components/Advantages.tsx";
 import Price from "../components/Price.tsx";
+import WorksGallery from "../islands/WorksGallery.tsx";
 
 import SocialLinks from "../components/SocialLinks.tsx";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <Welcome />
         <Advantages />
         <Price />
+        <WorksGallery />
         <SocialLinks />
       </main>
       <Footer />
