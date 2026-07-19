@@ -1,7 +1,7 @@
 import Header from "../islands/Header.tsx";
 import Geo from "../components/Geo.tsx";
 import Welcome from "../components/Welcome.tsx";
-import { Advantages } from "../islands/Advantages.tsx";
+import Advantages from "../components/Advantages.tsx";
 import Price from "../components/Price.tsx";
 import WorksGallery from "../islands/WorksGallery.tsx";
 

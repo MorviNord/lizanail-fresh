@@ -6,7 +6,7 @@ export type AvantageItem = {
   alt: string;
 };
 
-const advantages: AvantageItem[] = [
+const advantagesData: AvantageItem[] = [
   {
     id: 1,
     img: "/img/interests/sterilization_item.svg",
@@ -33,4 +33,4 @@ const advantages: AvantageItem[] = [
   },
 ];
 
-export default advantages;
+export default advantagesData;
