@@ -63,8 +63,7 @@ export default function WorksGallery() {
             {works.map((item) => (
               <article
                 key={item.title}
-                class="cursor-zoom-in overflow-hidden rounded-3xl border border-cream-200 bg-white/80 shadow-sm"
-                onClick={() => openImage(item.image, item.title)}
+                class="overflow-hidden rounded-3xl border border-cream-200 bg-white/80 shadow-sm"
                 role="button"
                 tabIndex={0}
                 onKeyDown={(event) => {
@@ -77,7 +76,8 @@ export default function WorksGallery() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  class="h-56 w-full object-cover"
+                  class="cursor-zoom-in h-56 w-full object-cover"
+                  onClick={() => openImage(item.image, item.title)}
                 />
                 <div class="p-4">
                   <h3 class="text-lg font-medium text-stone-500">
