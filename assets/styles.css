@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-midnight: #f5f5ed;
   --color-yellow: #dbc68f;
