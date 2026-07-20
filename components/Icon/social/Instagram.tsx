@@ -6,10 +6,8 @@ export const InstagramIcon = () => (
     stroke="currentColor"
     stroke-width="1.7"
   >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      d="M21 4L3 11.5l6 2m12-9.5l-4 16-6-4.5M9 13.5v5l3-3"
-    />
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
   </svg>
 );

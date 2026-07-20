@@ -15,6 +15,8 @@ export default function Price() {
           </div>
           <a
             href="https://mst.link/ovcharova_elizaveta"
+            target="_blank"
+            rel="noreferrer"
             class="inline-flex items-center justify-center rounded-full border border-gold-400/30 bg-white max-bg:bg-gold-400 px-5 py-2.5 text-sm font-medium text-gold-400 max-bg:text-white transition hover:bg-cream-100"
           >
             Записаться

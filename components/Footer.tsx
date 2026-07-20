@@ -15,6 +15,8 @@ export default function Footer() {
             </p>
             <a
               href="#booking"
+              target="_blank"
+              rel="noreferrer"
               class="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#d8c9a3] bg-[#fdfbf5] px-5 py-2.5 text-sm font-medium text-[#3a3226] transition-colors hover:bg-[#f3e9d2]"
             >
               Записаться
