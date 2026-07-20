@@ -106,7 +106,7 @@ export default function WorksGallery() {
               type="button"
               onClick={closeImage}
               aria-label="Закрыть фото"
-              class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-stone-500 shadow-lg"
+              class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-stone-500 shadow-lg cursor-pointer"
             >
               <CloseIcon />
             </button>
