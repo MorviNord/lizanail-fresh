@@ -1,4 +1,4 @@
-export function ChevronIcon({ open }: { open: boolean }) {
+export function ChevronIcon({ open }: { open?: boolean }) {
   return (
     <svg
       class={`h-5 w-5 shrink-0 text-[#a8925f] transition-transform duration-300 ${
