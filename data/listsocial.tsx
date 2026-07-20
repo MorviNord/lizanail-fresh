@@ -1,9 +1,9 @@
 // listsocial.tsx
 import { TelegramIcon } from "../components//Icon/social/telegram.tsx";
 // import { InstagramIcon } from "../components//Icon/social/Instagram.tsx";
-import { GiteaIcon } from "../components//Icon/social/gitea.tsx";
+import { IcWhatsapp } from "../components/Icon/social/IcWhatsapp.tsx";
 
-const social = [
+const sociallinks = [
   {
     id: 1,
     icon: <TelegramIcon />,
@@ -12,10 +12,10 @@ const social = [
   },
   {
     id: 2,
-    icon: <GiteaIcon />,
+    icon: <IcWhatsapp />,
     link: "https://github.com/MorviNord?tab=repositories",
     label: "Посмотреть github",
   },
 ];
 
-export default social;
+export default sociallinks;

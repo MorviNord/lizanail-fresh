@@ -6,7 +6,7 @@ import Price from "../components/Price.tsx";
 import WorksGallery from "../islands/WorksGallery.tsx";
 import FAQ from "../components/FAQ.tsx";
 
-import SocialLinks from "../components/SocialLinks.tsx";
+import Contacts from "../components/Contacts.tsx";
 
 import Footer from "../components/Footer.tsx";
 
@@ -22,7 +22,7 @@ export default function Home() {
         <WorksGallery />
         <FAQ />
 
-        <SocialLinks />
+        <Contacts />
       </main>
       <Footer />
     </>
