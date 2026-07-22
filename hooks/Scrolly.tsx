@@ -1,20 +1,21 @@
 import { signal } from "@preact/signals";
 
-// Создаём один глобальный сигнал для всего приложения
+const isBrowser = typeof window !== "undefined";
+
 export const scrollY = signal(
-  typeof window !== "undefined" ? globalThis.scrollY : 0,
+  isBrowser ? globalThis.scrollY : 0,
 );
 
-if (typeof window !== "undefined") {
-  let ticking = false;
+if (isBrowser) {
+  let frameId = 0;
 
   const onScroll = () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
+    if (frameId) return;
+    {
+      frameId = requestAnimationFrame(() => {
         scrollY.value = globalThis.scrollY;
-        ticking = false;
+        frameId = 0;
       });
-      ticking = true;
     }
   };
 
@@ -22,7 +23,5 @@ if (typeof window !== "undefined") {
   globalThis.addEventListener("scroll", onScroll, { passive: true });
 }
 
-// 2. Хук просто возвращает этот сигнал (или компоненты могут импортировать scrollY напрямую)
-export function useScrollY() {
-  return scrollY;
-}
+//  Хук просто возвращает этот сигнал (или компоненты могут импортировать scrollY напрямую)
+export const useScrollY = () => scrollY;

@@ -15,8 +15,8 @@ const sociallinks = [
   {
     id: 1,
     icon: <TelegramIcon />,
-    link: "https://t.me/technoflexer",
-    description: "@technoflexer",
+    link: "https://t.me/liza_ova",
+    description: "@liza_ova",
     label: "Telegram",
   },
   // {
