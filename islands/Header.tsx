@@ -1,22 +1,17 @@
-import { navItems } from "../data/nav.tsx";
+// components/Header.tsx
+//
+// Header остался серверным компонентом (без состояния). Раньше здесь
+// был spacer-блок под fixed-нав с захардкоженной высотой — он больше не
+// нужен: FloatingNav теперь sticky и сам резервирует своё место в потоке
+// документа, какой бы высоты он ни был в данный момент (padding у нава
+// меняется между scrolled/не-scrolled состояниями).
+
+import FloatingNav from "./FloatingNav.tsx";
 
 export default function Header() {
   return (
-    <header class="flex flex-col items-center px-4 pt-3 sm:px-6">
-      <nav class="w-full max-w-md rounded-2xl border border-cream-400 bg-white/70 px-4 py-3 shadow-[0_8px_24px_rgba(72,57,25,0.06)]">
-        <ul class="flex justify-between text-sm font-medium tracking-[0.2em] text-gray-text/90 sm:text-base">
-          {navItems.map((item) => (
-            <li key={item.id}>
-              <a
-                href={item.href}
-                class="transition-colors duration-200 hover:text-gold-400"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <header class="flex mt-12 flex-col items-center sm:px-6">
+      <FloatingNav />
 
       <div class="relative mt-8 mb-2 flex items-center justify-center">
         <div class="absolute inset-0 -z-10 rounded-full bg-linear-to-br from-gold-200/70 via-gold-100/50 to-gold-300/40 blur-3xl" />
