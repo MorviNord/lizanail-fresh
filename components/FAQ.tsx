@@ -8,7 +8,7 @@ export default function FAQ() {
         <p class="text-xs font-medium tracking-[0.25em] text-[#b3966a]">
           ВОПРОСЫ И ОТВЕТЫ
         </p>
-        <h2 class="mt-2 font-serif text-3xl leading-tight text-[#3a3226] sm:text-4xl">
+        <h2 class="mt-2 font-serif text-3xl leading-tight text-stone-500 sm:text-4xl">
           Частые вопросы
         </h2>
 

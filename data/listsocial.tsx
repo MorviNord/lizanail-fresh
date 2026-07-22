@@ -8,8 +8,8 @@ const sociallinks = [
   {
     id: 0,
     icon: <IcPhone />,
-    link: "tel:+79123456789",
-    description: "+7 (900) 123-45-67",
+    link: "tel:+79993600964",
+    description: "+7 (999) 360 0964",
     label: "Позвонить",
   },
   {

@@ -8,6 +8,7 @@ import FAQ from "../components/FAQ.tsx";
 
 import Contacts from "../components/Contacts.tsx";
 
+import ScrollToTop from "../islands/ScrollToTop.tsx";
 import Footer from "../components/Footer.tsx";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
 
         <Contacts />
       </main>
+      <ScrollToTop />
       <Footer />
     </>
   );

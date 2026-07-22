@@ -1,36 +1,19 @@
-import { useState } from "preact/hooks";
+import { useSignal } from "@preact/signals";
 import { CloseIcon } from "../components/Icon/IcClose.tsx";
+import works from "../data/WorksData.tsx";
 
 export default function WorksGallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [selectedTitle, setSelectedTitle] = useState<string>("");
-
-  const works = [
-    {
-      title: "Нежный френч",
-      description: "Лаконичный и всегда актуальный дизайн для любых событий.",
-      image: "/ava/ava.jpg",
-    },
-    {
-      title: "Песочный маникюр",
-      description: "Текстура с мягким блеском и уютный женственный вид.",
-      image: "/ava/ava.jpg",
-    },
-    {
-      title: "Яркий акцент",
-      description: "Минималистичный рисунок с выразительным акцентом.",
-      image: "/ava/ava.jpg",
-    },
-  ];
+  const selectedImage = useSignal<string | undefined>(undefined);
+  const selectedTitle = useSignal<string>("");
 
   const openImage = (image: string, title: string) => {
-    setSelectedImage(image);
-    setSelectedTitle(title);
+    selectedImage.value = image;
+    selectedTitle.value = title;
   };
 
   const closeImage = () => {
-    setSelectedImage(null);
-    setSelectedTitle("");
+    selectedImage.value = undefined;
+    selectedTitle.value = "";
   };
 
   return (
@@ -63,9 +46,10 @@ export default function WorksGallery() {
             {works.map((item) => (
               <article
                 key={item.title}
-                class="overflow-hidden rounded-3xl border border-cream-200 bg-white/80 shadow-sm"
+                class="overflow-hidden rounded-3xl border border-cream-200 bg-white/80 shadow-sm cursor-pointer"
                 role="button"
                 tabIndex={0}
+                onClick={() => openImage(item.image, item.title)}
                 onKeyDown={(event) => {
                   if (event.key === "Enter" || event.key === " ") {
                     event.preventDefault();
@@ -77,7 +61,6 @@ export default function WorksGallery() {
                   src={item.image}
                   alt={item.title}
                   class="cursor-zoom-in h-56 w-full object-cover"
-                  onClick={() => openImage(item.image, item.title)}
                 />
                 <div class="p-4">
                   <h3 class="text-lg font-medium text-stone-500">
@@ -93,7 +76,7 @@ export default function WorksGallery() {
         </div>
       </section>
 
-      {selectedImage && (
+      {selectedImage.value && (
         <div
           class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
           onClick={closeImage}
@@ -106,13 +89,13 @@ export default function WorksGallery() {
               type="button"
               onClick={closeImage}
               aria-label="Закрыть фото"
-              class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-stone-500 shadow-lg cursor-pointer"
+              class="absolute right-2 top-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-xl font-semibold text-stone-500 shadow-lg cursor-pointer z-10"
             >
               <CloseIcon />
             </button>
             <img
-              src={selectedImage}
-              alt={selectedTitle}
+              src={selectedImage.value}
+              alt={selectedTitle.value}
               class="max-h-[85vh] max-w-full rounded-3xl object-contain shadow-2xl"
             />
           </div>
