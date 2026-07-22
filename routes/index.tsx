@@ -1,4 +1,6 @@
 import Header from "../islands/Header.tsx";
+
+import Avatar from "../components/Avatar.tsx";
 import Geo from "../components/Geo.tsx";
 import Welcome from "../components/Welcome.tsx";
 import Advantages from "../components/Advantages.tsx";
@@ -16,13 +18,13 @@ export default function Home() {
     <>
       <Header />
       <main class="x-4 mx-auto flex flex-col items-center mb-6">
+        <Avatar />
         <Geo />
         <Welcome />
         <Advantages />
         <Price />
         <WorksGallery />
         <FAQ />
-
         <Contacts />
       </main>
       <ScrollToTop />

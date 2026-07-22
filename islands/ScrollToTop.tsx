@@ -1,10 +1,3 @@
-// islands/ScrollToTop.tsx
-//
-// Кнопка «наверх» появляется после прокрутки и по клику плавно
-// возвращает страницу в начало. Теперь использует общий хук useScrollY
-// (throttled через rAF, тот же, что и в FloatingNav) вместо своего
-// собственного addEventListener — меньше дублирования.
-
 import { computed } from "@preact/signals";
 import { useScrollY } from "../hooks/Scrolly.tsx";
 

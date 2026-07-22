@@ -1,40 +1,70 @@
-// components/Header.tsx
-//
-// Header остался серверным компонентом (без состояния). Раньше здесь
-// был spacer-блок под fixed-нав с захардкоженной высотой — он больше не
-// нужен: FloatingNav теперь sticky и сам резервирует своё место в потоке
-// документа, какой бы высоты он ни был в данный момент (padding у нава
-// меняется между scrolled/не-scrolled состояниями).
+import { computed, effect, useSignal } from "@preact/signals";
+import { useEffect } from "preact/hooks";
+import { useScrollY } from "../hooks/Scrolly.tsx";
+import { navItems } from "../data/nav.tsx";
 
-import FloatingNav from "./FloatingNav.tsx";
+interface FloatingNavProps {
+  // порог в пикселях, до которого нав всегда виден и "лёгкий"
+  topThreshold?: number;
+  // минимальная разница в px между кадрами скролла, чтобы не дёргаться
+  // от мелкого дрожания (например, инерционный скролл на мобильных)
+  minDelta?: number;
+}
 
-export default function Header() {
+export default function Header({
+  topThreshold = 24,
+  minDelta = 6,
+}: FloatingNavProps) {
+  const scrollY = useScrollY();
+  const visible = useSignal(true);
+  const scrolled = computed(() => scrollY.value > topThreshold);
+
+  useEffect(() => {
+    let lastY = scrollY.peek();
+
+    // effect() из @preact/signals сам подписывается на scrollY.value и
+    // перезапускается при каждом его изменении — не нужен второй
+    // addEventListener, слушатель уже есть внутри useScrollY.
+    return effect(() => {
+      const currentY = scrollY.value;
+      const diff = currentY - lastY;
+
+      if (currentY <= topThreshold) {
+        visible.value = true;
+      } else if (Math.abs(diff) > minDelta) {
+        visible.value = diff < 0; // diff < 0 значит скроллим вверх
+      }
+
+      lastY = currentY;
+    });
+  }, [topThreshold, minDelta]);
+
   return (
-    <header class="flex mt-12 flex-col items-center sm:px-6">
-      <FloatingNav />
-
-      <div class="relative mt-8 mb-2 flex items-center justify-center">
-        <div class="absolute inset-0 -z-10 rounded-full bg-linear-to-br from-gold-200/70 via-gold-100/50 to-gold-300/40 blur-3xl" />
-        <div class="rounded-4xl border border-cream-300 bg-linear-to-br from-cream-50 via-cream-100 to-cream-200 p-2 shadow-[0_20px_45px_rgba(109,99,62,0.16)]">
-          <picture class="block overflow-hidden rounded-[1.4rem]">
-            <source srcset="/ava/ava.jpg" type="image/jpeg" />
-            <img
-              width="256"
-              height="356"
-              src="/ava/ava.jpg"
-              alt="avatar"
-              class="h-80 w-80 rounded-[1.4rem] object-cover "
-            />
-          </picture>
-        </div>
-      </div>
-
-      <h1 class="mt-3 text-center text-[clamp(1.5rem,4vw,1.8rem)] min-h-6 bg-linear-to-r from-gray-text to-gold-400 bg-clip-text font-semibold tracking-[0.06em] text-transparent">
-        Елизавета Овчаровa
-      </h1>
-      <p class="mt-1 text-center text-xs uppercase tracking-[0.32em] text-stone-500">
-        Мастер маникюра
-      </p>
-    </header>
+    <div
+      class={`fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3 transition-transform duration-300 sm:px-6 ${
+        visible.value ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <nav
+        class={`w-full max-w-md rounded-2xl border transition-all duration-300 ${
+          scrolled.value
+            ? "border-cream-400 bg-white/90 py-2.5 shadow-[0_8px_24px_rgba(72,57,25,0.12)] backdrop-blur-md"
+            : "border-cream-400/60 bg-white/50 py-3 shadow-none backdrop-blur-sm"
+        } px-4`}
+      >
+        <ul class="flex w-full justify-between text-sm font-medium tracking-[0.15em] text-gray-text/90 sm:tracking-[0.2em] sm:text-base">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <a
+                href={item.href}
+                class="transition-colors duration-200 hover:text-gold-400"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 }
