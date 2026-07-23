@@ -5,6 +5,8 @@ export default function Avatar() {
         <div class="absolute inset-0 -z-10 rounded-full bg-linear-to-br from-gold-200/70 via-gold-100/50 to-gold-300/40 blur-3xl" />
         <div class="rounded-4xl border border-cream-300 bg-linear-to-br from-cream-50 via-cream-100 to-cream-200 p-2 shadow-[0_20px_45px_rgba(109,99,62,0.16)]">
           <picture class="block overflow-hidden rounded-[1.4rem]">
+            <source srcset="/ava/ava.jxl" type="image/jxl" />
+            <source srcset="/ava/ava.webp" type="image/webp" />
             <source srcset="/ava/ava.jpg" type="image/jpeg" />
             <img
               width="256"

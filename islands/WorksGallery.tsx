@@ -78,7 +78,7 @@ export default function WorksGallery() {
 
       {selectedImage.value && (
         <div
-          class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          class="fixed inset-0 z-3 flex items-center justify-center bg-black/80 p-4"
           onClick={closeImage}
         >
           <div

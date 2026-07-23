@@ -41,7 +41,7 @@ export default function Header({
 
   return (
     <div
-      class={`fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-3 transition-transform duration-300 sm:px-6 ${
+      class={`fixed inset-x-0 top-0 z-2 flex justify-center px-4 pt-3 transition-transform duration-300 sm:px-6 ${
         visible.value ? "translate-y-0" : "-translate-y-full"
       }`}
     >

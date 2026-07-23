@@ -19,7 +19,7 @@ export default function ScrollToTop({ threshold = 400 }: ScrollToTopProps) {
       type="button"
       onClick={scrollToTop}
       aria-label="Наверх страницы"
-      class={`fixed bottom-12 right-5 z-50 flex h-11 w-11 items-center justify-center rounded-full border border-[#ece4d3] bg-[#fffdf9]/90 text-[#a8925f] shadow-[0_10px_30px_-12px_rgba(150,130,80,0.35)] backdrop-blur transition-all duration-300 hover:bg-[#f3e9d2] sm:bottom-8 sm:right-8 ${
+      class={`fixed bottom-12 right-5 z-2 flex h-11 w-11 items-center justify-center rounded-full border border-[#ece4d3] bg-[#fffdf9]/90 text-[#a8925f] shadow-[0_10px_30px_-12px_rgba(150,130,80,0.35)] backdrop-blur transition-all duration-300 hover:bg-[#f3e9d2] sm:bottom-8 sm:right-8 ${
         visible.value
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"
