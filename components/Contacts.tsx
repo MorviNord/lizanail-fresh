@@ -15,7 +15,6 @@ export default function Contacts({
   city = "Ставрополь, Россия",
   address = "ул. Ленина, 24, студия «Уют»",
   workingHours = "Пн–Сб: 10:00–20:00",
-  bookingHref = "#booking",
 }) {
   return (
     <section id="contacts" class="mx-auto w-full max-w-3xl px-5 py-10">

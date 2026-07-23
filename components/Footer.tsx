@@ -1,5 +1,3 @@
-import sociallinks from "../data/listsocial.tsx";
-
 export default function Footer() {
   return (
     <footer class="mt-8 xs:flex justify-between">
